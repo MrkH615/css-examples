@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <title>Responsive Web Design Task: Task</title>
     <link rel="stylesheet" href="../styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       * {
         box-sizing: border-box;
@@ -52,7 +53,11 @@
         list-style: none;
         margin: 0;
         padding: 0;
-      }
+        /* own code starts */
+        display: grid;
+        column-gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }  /* own code ends */
 
       .cards li {
         border: 5px solid #000;
@@ -76,8 +81,47 @@
         padding: 0.5em 1em;
         color: #fff;
       }
+ /* own code starts */
+      @media screen and (min-width: 70em){
+
+        header {
+           display: flex;
+           justify-content: space-between;
+        }
+
+        header a {
+          border-top: none;
+          padding-top: 2em;
+        }
+
+        .title {
+          justify-self: flex-start;
+        }
+
+        nav {
+          justify-self: flex-end;
+        }
+
+        nav ul {
+          display: flex;
+          flex-direction: row;
+        }
+
+        main {
+          display: grid;
+          grid-template-columns: 4fr 2.35fr;
+          column-gap: 20px;
+        }
+
+        .sidebar {
+          text-align: center;
+          margin-top: 20px;
+
+        }
+
+      }
     </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
   </head>
 
   <body>

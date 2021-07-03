@@ -17,6 +17,12 @@
         margin: 0;
       }
 
+      .container {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
       .card {
         display: grid;
         grid-template-rows: 200px min-content;
@@ -29,9 +35,15 @@
       }
 
       .tags {
+
+        display: flex;
+        flex-wrap: wrap;
+       justify-content: center;
+       
         margin: 0;
         padding: 0;
         list-style: none;
+
       }
 
       .tags > * {
